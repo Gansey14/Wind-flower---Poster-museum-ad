@@ -10,11 +10,18 @@
 </head>
 
 <body>
-    <div class="rectanglewrapper">
-        <div class="rectangle"></div>
+    <div id="video-background">
+        <video id="video" autoplay muted></video>
     </div>
-    <script src="app.js"></script>
+    <div class="rectanglewrapper">
+        <div class="rectangle">
+            <img src="./images/flower.png" alt="flower-moving" id="flower">
+        </div>
+        <img src="./images/heart-circle.png" alt="heart-notmoving" id="heart">
+    </div>
     <div id="result"></div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>

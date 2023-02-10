@@ -1,4 +1,5 @@
 const box = document.querySelector('.rectangle');
+const flower = document.querySelector('#flower');
 let degree = 0;
 
 const owmApi = "https://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=en&units=metric&appid=94df7f9ff51ea5f99470094fe37eeb0e"
@@ -13,15 +14,15 @@ fetch(owmApi).then(response => {
         speed = data.wind.speed;
 
         setInterval(() => {
-            speed = speed / 3;
+            speed = speed / 1.5;
             setTimeout(() => {
-                speed = speed * 3;
+                speed = speed * 1.5;
             }, 2000);
-        }, 5000);
+        }, 7000);
 
         setInterval(function () {
             degree = (degree + speed * 2.7) % 360;
-            box.style.transform = `rotate(${degree}deg)`;
+            flower.style.transform = `rotate(${degree}deg)`;
         }, 50);
 
     })
@@ -34,3 +35,17 @@ fetch(owmApi).then(response => {
 setInterval(function () {
     window.location.reload();
 }, 10 * 60 * 1000);
+
+// this should make the live video from camera   
+
+window.onload = function () {
+    const video = document.getElementById("video");
+
+    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+        .then(stream => {
+            video.srcObject = stream;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+};
