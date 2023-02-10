@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <title>Poster</title>
 </head>
 
@@ -13,13 +17,22 @@
     <div id="video-background">
         <video id="video" autoplay muted></video>
     </div>
-    <div class="rectanglewrapper">
-        <div class="rectangle">
-            <img src="./images/flower.png" alt="flower-moving" id="flower">
+    <div class="hero">
+        <div class="textwrapper">
+            <h1><span id="percentage">100</span>% VEDVARENDE ENERGI</h1>
+            <div class="speedwrapper">
+                <p>Wind speed in Aarhus now</p>
+                <p id="result"></p>
+            </div>
+
         </div>
-        <img src="./images/heart-circle.png" alt="heart-notmoving" id="heart">
+        <div class="rectanglewrapper">
+            <div class="rectangle">
+                <img src="./images/flower.png" alt="flower-moving" id="flower">
+            </div>
+            <img src="./images/heart-circle.png" alt="heart-notmoving" id="heart">
+        </div>
     </div>
-    <div id="result"></div>
 
     <script src="app.js"></script>
 </body>

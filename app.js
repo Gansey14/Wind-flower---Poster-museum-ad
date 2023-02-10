@@ -1,5 +1,6 @@
 const box = document.querySelector('.rectangle');
 const flower = document.querySelector('#flower');
+const percentage = document.querySelector('#percentage');
 let degree = 0;
 
 const owmApi = "https://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=en&units=metric&appid=94df7f9ff51ea5f99470094fe37eeb0e"
@@ -12,6 +13,8 @@ fetch(owmApi).then(response => {
         console.log(data); // show what's in the json
         result.innerHTML = data.wind.speed
         speed = data.wind.speed;
+        percentageLive = speed * 15;
+        percentage.innerHTML = percentageLive;
 
         setInterval(() => {
             speed = speed / 1.5;
@@ -49,3 +52,4 @@ window.onload = function () {
             console.error(error);
         });
 };
+
