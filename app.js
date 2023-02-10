@@ -13,7 +13,7 @@ fetch(owmApi).then(response => {
         console.log(data); // show what's in the json
         result.innerHTML = data.wind.speed
         speed = data.wind.speed;
-        percentageLive = speed * 13.5;
+        percentageLive = speed * 12;
         percentage.innerHTML = percentageLive;
 
         setInterval(() => {
