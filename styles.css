@@ -25,6 +25,13 @@ body {
     justify-content: center;
 }
 
+.finalresult {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
 .speedwrapper {
     background-color: #ff1521dd;
     border-radius: 8px;

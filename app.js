@@ -14,7 +14,7 @@ fetch(owmApi).then(response => {
         result.innerHTML = data.wind.speed
         speed = data.wind.speed;
         percentageLive = speed * 12;
-        percentage.innerHTML = percentageLive;
+        percentage.innerHTML = percentageLive.toFixed(2);
 
         setInterval(() => {
             speed = speed / 1.5;
@@ -24,7 +24,7 @@ fetch(owmApi).then(response => {
         }, 7000);
 
         setInterval(function () {
-            degree = (degree + speed * 2.7) % 360;
+            degree = (degree + speed * 0.5) % 360;
             flower.style.transform = `rotate(${degree}deg)`;
         }, 50);
 
