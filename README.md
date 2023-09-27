@@ -26,7 +26,7 @@
   - Siiri Lietu (Concept Development)
   - Tanja Dorthea Nielsen (Presentation)
 
-- **Duration:** 6 weeks
+- **Duration:** 1 week
 
 ## Project Goals
 
